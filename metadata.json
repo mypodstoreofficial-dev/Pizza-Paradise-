@@ -1,0 +1,6 @@
+{
+  "name": "Pizza Paradise Pakistan",
+  "description": "Official website of Pizza Paradise Pakistan. Authentic stone-baked crusts, cheesy crowns, gourmet burgers, creamy pastas & nationwide 30-min express delivery across Karachi, Lahore, Islamabad & more.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

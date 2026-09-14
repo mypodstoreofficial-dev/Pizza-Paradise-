@@ -1,0 +1,406 @@
+@import "tailwindcss";
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes spin7Border {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@keyframes spin4Border {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@keyframes run4ColorsGlow {
+  0%, 100% {
+    box-shadow: 0 0 16px -1px rgba(239, 68, 68, 0.55), 0 0 6px rgba(239, 68, 68, 0.3);
+  }
+  25% {
+    box-shadow: 0 0 16px -1px rgba(245, 158, 11, 0.55), 0 0 6px rgba(245, 158, 11, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 16px -1px rgba(16, 185, 129, 0.55), 0 0 6px rgba(16, 185, 129, 0.3);
+  }
+  75% {
+    box-shadow: 0 0 16px -1px rgba(59, 130, 246, 0.55), 0 0 6px rgba(59, 130, 246, 0.3);
+  }
+}
+
+@keyframes run7ColorsGlow {
+  0%, 100% {
+    box-shadow: 0 0 24px -2px rgba(239, 68, 68, 0.55), 0 0 10px rgba(239, 68, 68, 0.3);
+  }
+  14% {
+    box-shadow: 0 0 24px -2px rgba(249, 115, 22, 0.55), 0 0 10px rgba(249, 115, 22, 0.3);
+  }
+  28% {
+    box-shadow: 0 0 24px -2px rgba(234, 179, 8, 0.55), 0 0 10px rgba(234, 179, 8, 0.3);
+  }
+  42% {
+    box-shadow: 0 0 24px -2px rgba(16, 185, 129, 0.55), 0 0 10px rgba(16, 185, 129, 0.3);
+  }
+  57% {
+    box-shadow: 0 0 24px -2px rgba(6, 182, 212, 0.55), 0 0 10px rgba(6, 182, 212, 0.3);
+  }
+  71% {
+    box-shadow: 0 0 24px -2px rgba(59, 130, 246, 0.55), 0 0 10px rgba(59, 130, 246, 0.3);
+  }
+  85% {
+    box-shadow: 0 0 24px -2px rgba(168, 85, 247, 0.55), 0 0 10px rgba(168, 85, 247, 0.3);
+  }
+}
+
+/* ==========================================================================
+   EXACT 7-COLOR TOGGLE BUTTON STYLING (Matching user's reference image)
+   ========================================================================== */
+.seven-color-btn-active {
+  background-color: #0b0c15;
+  border: 2px solid transparent !important;
+  background-clip: padding-box, border-box !important;
+  background-origin: padding-box, border-box !important;
+  background-image:
+    linear-gradient(#0b0c15, #0b0c15),
+    conic-gradient(
+      from var(--angle, 0deg),
+      #ef4444 0deg,
+      #f97316 51deg,
+      #eab308 102deg,
+      #10b981 154deg,
+      #06b6d4 205deg,
+      #3b82f6 257deg,
+      #a855f7 308deg,
+      #ef4444 360deg
+    ) !important;
+  animation: spin7Border 2.8s linear infinite, run7ColorsGlow 3.5s ease-in-out infinite !important;
+  box-shadow: 
+    0 6px 20px -3px rgba(236, 72, 153, 0.45),
+    0 0 14px 0 rgba(6, 182, 212, 0.35);
+}
+
+.seven-color-btn-inactive {
+  background-color: #12131b !important;
+  border: 1.5px solid #292d3f !important;
+  background-image: none !important;
+  animation: none !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* 3D Background Toggle Button (matching user's uploaded screenshot) */
+.threed-bg-btn-active {
+  background-color: #0b0c15;
+  border: 2px solid transparent !important;
+  background-clip: padding-box, border-box !important;
+  background-origin: padding-box, border-box !important;
+  background-image:
+    linear-gradient(#0b0c15, #0b0c15),
+    linear-gradient(90deg, #f97316 0%, #eab308 25%, #10b981 70%, #06b6d4 100%) !important;
+  box-shadow: 
+    0 4px 18px -2px rgba(249, 115, 22, 0.45),
+    0 0 14px 0 rgba(16, 185, 129, 0.35);
+}
+
+.threed-bg-btn-inactive {
+  background-color: #12131b;
+  border: 1.5px solid #292d3f !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================================================
+   7-COLOR AUTOMATIC RUNNING BORDER STYLES (WHEN TOGGLE IS "ON")
+   Covers entire website: Navbar, Hero, Categories, Buttons, Cards & Boxes
+   ========================================================================== */
+
+/* 1. Main Big Boxes Across Website */
+.seven-color-active .box-run-4colors {
+  position: relative;
+  border: 2.5px solid transparent !important;
+  background-clip: padding-box, border-box !important;
+  background-origin: padding-box, border-box !important;
+  background-image: 
+    linear-gradient(to bottom, rgba(14, 12, 11, 0.88), rgba(10, 8, 7, 0.94)),
+    conic-gradient(
+      from var(--angle, 0deg),
+      #ef4444 0deg,
+      #f97316 51deg,
+      #eab308 102deg,
+      #10b981 154deg,
+      #06b6d4 205deg,
+      #3b82f6 257deg,
+      #a855f7 308deg,
+      #ef4444 360deg
+    ) !important;
+  animation: spin7Border 3.5s linear infinite, run7ColorsGlow 5s ease-in-out infinite !important;
+}
+
+/* 2. Menu Cards & Food Showcase Cards */
+.seven-color-active .card-run-4colors {
+  position: relative;
+  border: 2px solid transparent !important;
+  background-clip: padding-box, border-box !important;
+  background-origin: padding-box, border-box !important;
+  background-image: 
+    linear-gradient(to bottom, rgba(16, 14, 13, 0.88), rgba(12, 10, 9, 0.95)),
+    conic-gradient(
+      from var(--angle, 0deg),
+      #ef4444 0deg,
+      #f97316 51deg,
+      #eab308 102deg,
+      #10b981 154deg,
+      #06b6d4 205deg,
+      #3b82f6 257deg,
+      #a855f7 308deg,
+      #ef4444 360deg
+    ) !important;
+  animation: spin7Border 3.5s linear infinite, run7ColorsGlow 5s ease-in-out infinite !important;
+}
+
+/* 3. Deals & Subtle Cards */
+.seven-color-active .card-run-4colors-subtle {
+  position: relative;
+  border: 1.5px solid transparent !important;
+  background-clip: padding-box, border-box !important;
+  background-origin: padding-box, border-box !important;
+  background-image: 
+    linear-gradient(to bottom, rgba(18, 16, 15, 0.85), rgba(12, 10, 9, 0.92)),
+    conic-gradient(
+      from var(--angle, 0deg),
+      #ef4444 0deg,
+      #f97316 51deg,
+      #eab308 102deg,
+      #10b981 154deg,
+      #06b6d4 205deg,
+      #3b82f6 257deg,
+      #a855f7 308deg,
+      #ef4444 360deg
+    ) !important;
+  animation: spin7Border 4s linear infinite, run7ColorsGlow 6s ease-in-out infinite !important;
+}
+
+/* 4. Navbar Logo Badge, Delivery Pill, Search & Buttons */
+.seven-color-active .nav-box-run-4colors,
+.seven-color-active .nav-pill-run-4colors,
+.seven-color-active .nav-btn-run-4colors,
+.seven-color-active .hotline-run-4colors {
+  position: relative;
+  border: 2px solid transparent !important;
+  background-clip: padding-box, border-box !important;
+  background-origin: padding-box, border-box !important;
+  background-image: 
+    linear-gradient(to bottom, rgba(14, 12, 11, 0.94), rgba(10, 8, 7, 0.98)),
+    conic-gradient(
+      from var(--angle, 0deg),
+      #ef4444 0deg,
+      #f97316 51deg,
+      #eab308 102deg,
+      #10b981 154deg,
+      #06b6d4 205deg,
+      #3b82f6 257deg,
+      #a855f7 308deg,
+      #ef4444 360deg
+    ) !important;
+  animation: spin7Border 3s linear infinite, run7ColorsGlow 4s ease-in-out infinite !important;
+}
+
+/* 5. Category Quick-Selector Cards */
+.seven-color-active .hero-cat-run-7colors {
+  position: relative;
+  border: 2px solid transparent !important;
+  background-clip: padding-box, border-box !important;
+  background-origin: padding-box, border-box !important;
+  background-image: 
+    linear-gradient(to bottom, rgba(16, 14, 13, 0.94), rgba(10, 8, 7, 0.98)),
+    conic-gradient(
+      from var(--angle, 0deg),
+      #ef4444 0deg,
+      #f97316 51deg,
+      #eab308 102deg,
+      #10b981 154deg,
+      #06b6d4 205deg,
+      #3b82f6 257deg,
+      #a855f7 308deg,
+      #ef4444 360deg
+    ) !important;
+  animation: spin7Border 3.2s linear infinite, run7ColorsGlow 4.5s ease-in-out infinite !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.seven-color-active .hero-cat-run-7colors:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 28px -2px rgba(249, 115, 22, 0.65), 0 0 12px rgba(6, 182, 212, 0.45) !important;
+}
+
+/* 6. Primary Action Button (Order 3D Pizza Menu) */
+.seven-color-active .hero-btn-order-run-7colors {
+  position: relative;
+  border: 2.5px solid transparent !important;
+  background-clip: padding-box, border-box !important;
+  background-origin: padding-box, border-box !important;
+  background-image: 
+    linear-gradient(135deg, #dc2626 0%, #ea580c 50%, #d97706 100%),
+    conic-gradient(
+      from var(--angle, 0deg),
+      #ef4444 0deg,
+      #f97316 51deg,
+      #eab308 102deg,
+      #10b981 154deg,
+      #06b6d4 205deg,
+      #3b82f6 257deg,
+      #a855f7 308deg,
+      #ef4444 360deg
+    ) !important;
+  animation: spin7Border 2.6s linear infinite, run7ColorsGlow 3.5s ease-in-out infinite !important;
+}
+
+.seven-color-active .hero-btn-order-run-7colors:hover {
+  box-shadow: 0 0 32px -1px rgba(239, 68, 68, 0.75), 0 0 14px rgba(249, 115, 22, 0.5) !important;
+}
+
+/* 7. Secondary Action Button (Custom Pizza 3D Lab) */
+.seven-color-active .hero-btn-lab-run-7colors {
+  position: relative;
+  border: 2.2px solid transparent !important;
+  background-clip: padding-box, border-box !important;
+  background-origin: padding-box, border-box !important;
+  background-image: 
+    linear-gradient(to bottom, rgba(14, 12, 11, 0.96), rgba(8, 7, 6, 0.99)),
+    conic-gradient(
+      from var(--angle, 0deg),
+      #ef4444 0deg,
+      #f97316 51deg,
+      #eab308 102deg,
+      #10b981 154deg,
+      #06b6d4 205deg,
+      #3b82f6 257deg,
+      #a855f7 308deg,
+      #ef4444 360deg
+    ) !important;
+  animation: spin7Border 2.8s linear infinite, run7ColorsGlow 4s ease-in-out infinite !important;
+}
+
+.seven-color-active .hero-btn-lab-run-7colors:hover {
+  box-shadow: 0 0 28px -1px rgba(234, 179, 8, 0.65), 0 0 12px rgba(16, 185, 129, 0.45) !important;
+}
+
+/* 8. National UAN Button */
+.seven-color-active .hero-btn-uan-run-7colors {
+  position: relative;
+  border: 2px solid transparent !important;
+  background-clip: padding-box, border-box !important;
+  background-origin: padding-box, border-box !important;
+  background-image: 
+    linear-gradient(to bottom, rgba(15, 14, 13, 0.94), rgba(10, 9, 8, 0.98)),
+    conic-gradient(
+      from var(--angle, 0deg),
+      #ef4444 0deg,
+      #f97316 51deg,
+      #eab308 102deg,
+      #10b981 154deg,
+      #06b6d4 205deg,
+      #3b82f6 257deg,
+      #a855f7 308deg,
+      #ef4444 360deg
+    ) !important;
+  animation: spin7Border 3s linear infinite, run7ColorsGlow 4s ease-in-out infinite !important;
+}
+
+.seven-color-active .hero-btn-uan-run-7colors:hover {
+  box-shadow: 0 0 26px -1px rgba(16, 185, 129, 0.65), 0 0 12px rgba(6, 182, 212, 0.45) !important;
+}
+
+/* 9. Trust & Certification Badges */
+.seven-color-active .hero-trust-run-7colors {
+  position: relative;
+  border: 1.8px solid transparent !important;
+  background-clip: padding-box, border-box !important;
+  background-origin: padding-box, border-box !important;
+  background-image: 
+    linear-gradient(to bottom, rgba(16, 14, 13, 0.92), rgba(10, 8, 7, 0.96)),
+    conic-gradient(
+      from var(--angle, 0deg),
+      #ef4444 0deg,
+      #f97316 51deg,
+      #eab308 102deg,
+      #10b981 154deg,
+      #06b6d4 205deg,
+      #3b82f6 257deg,
+      #a855f7 308deg,
+      #ef4444 360deg
+    ) !important;
+  animation: spin7Border 3.4s linear infinite, run7ColorsGlow 4.5s ease-in-out infinite !important;
+  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.6);
+}
+
+.seven-color-active .hero-trust-run-7colors:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 22px -2px rgba(168, 85, 247, 0.55), 0 0 10px rgba(59, 130, 246, 0.4) !important;
+}
+
+/* 10. National Delivery Hub Router Box */
+.seven-color-active .hero-router-run-7colors {
+  position: relative;
+  border: 2.2px solid transparent !important;
+  background-clip: padding-box, border-box !important;
+  background-origin: padding-box, border-box !important;
+  background-image: 
+    linear-gradient(to bottom, rgba(16, 14, 13, 0.94), rgba(10, 8, 7, 0.98)),
+    conic-gradient(
+      from var(--angle, 0deg),
+      #ef4444 0deg,
+      #f97316 51deg,
+      #eab308 102deg,
+      #10b981 154deg,
+      #06b6d4 205deg,
+      #3b82f6 257deg,
+      #a855f7 308deg,
+      #ef4444 360deg
+    ) !important;
+  animation: spin7Border 3.6s linear infinite, run7ColorsGlow 4.8s ease-in-out infinite !important;
+}
+
+/* ==========================================================================
+   COMPREHENSIVE COLOR "OFF" STATE (WHEN TOGGLE IS "OFF")
+   Entire website shuts down all running rainbow animations, conic borders & glows!
+   ========================================================================== */
+.seven-color-inactive-site .box-run-4colors,
+.seven-color-inactive-site .card-run-4colors,
+.seven-color-inactive-site .card-run-4colors-subtle,
+.seven-color-inactive-site .nav-box-run-4colors,
+.seven-color-inactive-site .nav-pill-run-4colors,
+.seven-color-inactive-site .nav-btn-run-4colors,
+.seven-color-inactive-site .hotline-run-4colors,
+.seven-color-inactive-site .hero-cat-run-7colors,
+.seven-color-inactive-site .hero-btn-lab-run-7colors,
+.seven-color-inactive-site .hero-btn-uan-run-7colors,
+.seven-color-inactive-site .hero-trust-run-7colors,
+.seven-color-inactive-site .hero-router-run-7colors {
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  background: rgba(14, 12, 11, 0.88) !important;
+  background-image: none !important;
+  animation: none !important;
+  box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Inactive State for Order 3D Menu button (keeps clean solid red gradient, removes rainbow border) */
+.seven-color-inactive-site .hero-btn-order-run-7colors {
+  border: 1px solid rgba(239, 68, 68, 0.5) !important;
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%) !important;
+  background-image: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%) !important;
+  animation: none !important;
+  box-shadow: 0 6px 20px -5px rgba(220, 38, 38, 0.4) !important;
+}
+
+/* Inactive State for 3D Video toggle button (removes rainbow gradient border) */
+.seven-color-inactive-site .threed-bg-btn-active {
+  border: 1.5px solid rgba(255, 255, 255, 0.18) !important;
+  background-color: #12131b !important;
+  background-image: none !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4) !important;
+}
+
