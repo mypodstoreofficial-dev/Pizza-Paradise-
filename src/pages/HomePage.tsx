@@ -197,29 +197,43 @@ export const HomePage: React.FC<HomePageProps> = ({
                     <span className="h-[1px] w-6 bg-gradient-to-l from-transparent to-amber-400/80" />
                   </div>
 
-                  {/* Main Monumental National Typography */}
+                  {/* Main Monumental National Typography with Logo */}
                   <div className="flex flex-col items-center lg:items-start select-none">
-                    <div className="flex items-center justify-center lg:justify-start">
-                      <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl font-black tracking-tight leading-none font-serif select-none drop-shadow-[0_10px_35px_rgba(0,0,0,0.95)]">
-                        <span className="text-transparent bg-clip-text bg-gradient-to-b from-amber-100 via-amber-300 to-amber-500 drop-shadow-[0_2px_12px_rgba(245,158,11,0.5)]">
-                          PIZZA
-                        </span>
-                        {" "}
-                        <span className="text-transparent bg-clip-text bg-gradient-to-b from-red-400 via-red-500 to-rose-700 drop-shadow-[0_4px_18px_rgba(239,68,68,0.7)]">
-                          PARADISE
-                        </span>
-                      </h1>
-                      <span className="text-xs sm:text-sm font-black text-amber-400/90 ml-1.5 -mt-6 border border-amber-400/40 rounded px-1.5 py-0.5 bg-black/60 font-sans">
-                        TM
-                      </span>
-                    </div>
+                    <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                      {/* Authentic Pizza Paradise Official Logo Emblem with 4-color Running Border */}
+                      <div className="relative nav-box-run-4colors p-1.5 rounded-2xl shadow-2xl shrink-0 group bg-stone-950/90">
+                        <img
+                          src={ASSETS_3D.logo}
+                          alt="Pizza Paradise Official Logo"
+                          referrerPolicy="no-referrer"
+                          className="w-20 h-20 sm:w-24 sm:h-24 object-contain rounded-xl drop-shadow-[0_0_20px_rgba(245,158,11,0.6)] transform group-hover:scale-105 group-hover:rotate-2 transition-all duration-300"
+                        />
+                      </div>
 
-                    {/* Official National Flagship Title Banner */}
-                    <div className="mt-2 inline-flex items-center gap-2 bg-gradient-to-r from-red-950/80 via-black to-emerald-950/80 border border-amber-500/40 px-3.5 py-1 rounded-lg shadow-inner">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                      <span className="text-[11px] sm:text-xs font-black tracking-[0.16em] uppercase text-amber-200">
-                        PAKISTAN'S OFFICIAL PIZZA & GOURMET CULINARY HEADQUARTERS
-                      </span>
+                      <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
+                        <div className="flex items-center justify-center lg:justify-start">
+                          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl font-black tracking-tight leading-none font-serif select-none drop-shadow-[0_10px_35px_rgba(0,0,0,0.95)]">
+                            <span className="text-transparent bg-clip-text bg-gradient-to-b from-amber-100 via-amber-300 to-amber-500 drop-shadow-[0_2px_12px_rgba(245,158,11,0.5)]">
+                              PIZZA
+                            </span>
+                            {" "}
+                            <span className="text-transparent bg-clip-text bg-gradient-to-b from-red-400 via-red-500 to-rose-700 drop-shadow-[0_4px_18px_rgba(239,68,68,0.7)]">
+                              PARADISE
+                            </span>
+                          </h1>
+                          <span className="text-xs sm:text-sm font-black text-amber-400/90 ml-1.5 -mt-6 border border-amber-400/40 rounded px-1.5 py-0.5 bg-black/60 font-sans">
+                            TM
+                          </span>
+                        </div>
+
+                        {/* Official National Flagship Title Banner */}
+                        <div className="mt-2 inline-flex items-center gap-2 bg-gradient-to-r from-red-950/80 via-black to-emerald-950/80 border border-amber-500/40 px-3.5 py-1 rounded-lg shadow-inner">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                          <span className="text-[11px] sm:text-xs font-black tracking-[0.16em] uppercase text-amber-200">
+                            PAKISTAN'S OFFICIAL PIZZA & GOURMET CULINARY HEADQUARTERS
+                          </span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -543,7 +557,7 @@ export const HomePage: React.FC<HomePageProps> = ({
 
       {/* Website Dedicated Pages Hub - Har Page ko Button Press karke Alag Dekhein */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-b from-stone-900/95 via-stone-950/95 to-stone-900/95 border-2 border-amber-500/50 rounded-3xl p-6 sm:p-10 shadow-2xl space-y-6 backdrop-blur-md">
+        <div className="box-run-4colors rounded-3xl p-6 sm:p-10 shadow-2xl space-y-6 backdrop-blur-md">
           <div className="text-center max-w-3xl mx-auto space-y-2">
             <div className="inline-flex items-center gap-2 bg-amber-500/20 border border-amber-500/50 text-amber-300 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider">
               <Sparkles className="w-4 h-4 text-amber-400" />
@@ -559,7 +573,7 @@ export const HomePage: React.FC<HomePageProps> = ({
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 pt-2">
             {/* 1. Menu Page Card */}
-            <div className="bg-stone-950/90 border border-stone-800 hover:border-amber-400 rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-xl group">
+            <div className="card-run-4colors rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-xl group">
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-3xl p-2.5 rounded-xl bg-red-950/80 border border-red-800/60">🍕</span>
@@ -586,7 +600,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             </div>
 
             {/* 2. Deals Page Card */}
-            <div className="bg-stone-950/90 border border-stone-800 hover:border-yellow-400 rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-xl group">
+            <div className="card-run-4colors rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-xl group">
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-3xl p-2.5 rounded-xl bg-yellow-950/80 border border-yellow-800/60">🎁</span>
@@ -613,7 +627,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             </div>
 
             {/* 3. Pizza Lab Page Card */}
-            <div className="bg-stone-950/90 border border-stone-800 hover:border-amber-400 rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-xl group">
+            <div className="card-run-4colors rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-xl group">
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-3xl p-2.5 rounded-xl bg-amber-950/80 border border-amber-800/60">🧪</span>
@@ -640,7 +654,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             </div>
 
             {/* 4. Table Booking Page Card */}
-            <div className="bg-stone-950/90 border border-stone-800 hover:border-rose-400 rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-xl group">
+            <div className="card-run-4colors rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-xl group">
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-3xl p-2.5 rounded-xl bg-rose-950/80 border border-rose-800/60">📅</span>
@@ -667,7 +681,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             </div>
 
             {/* 5. Outlets Page Card */}
-            <div className="bg-stone-950/90 border border-stone-800 hover:border-emerald-400 rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-xl group">
+            <div className="card-run-4colors rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-xl group">
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-3xl p-2.5 rounded-xl bg-emerald-950/80 border border-emerald-800/60">📍</span>
@@ -694,7 +708,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             </div>
 
             {/* 6. Live Track Order Page Card */}
-            <div className="bg-stone-950/90 border border-stone-800 hover:border-cyan-400 rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-xl group">
+            <div className="card-run-4colors rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-xl group">
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-3xl p-2.5 rounded-xl bg-cyan-950/80 border border-cyan-800/60">🚚</span>

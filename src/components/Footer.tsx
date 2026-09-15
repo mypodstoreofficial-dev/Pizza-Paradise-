@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import { STORE_INFO } from '../data/menuData';
 import { NATIONAL_CITIES } from '../data/nationalData';
+import { ASSETS_3D } from '../data/assets';
 import { PageId, CategoryId } from '../types';
 
 interface FooterProps {
@@ -83,23 +84,28 @@ export const Footer: React.FC<FooterProps> = ({
           
           {/* Col 1 & 2: Brand details & Selected Hub */}
           <div className="lg:col-span-2 space-y-4">
-            {/* Logo */}
-            <div className="flex items-center gap-2">
+            {/* Official Logo */}
+            <div className="flex items-center gap-3">
               <button 
                 onClick={() => { onNavigate('home'); scrollToTop(); }}
-                className="flex flex-col items-start bg-stone-900 border border-stone-700 px-3 py-1 rounded-xl focus:outline-none"
+                className="flex items-center gap-2.5 bg-stone-900/90 border border-stone-700 hover:border-amber-400 p-2 rounded-2xl focus:outline-none transition group cursor-pointer shadow-lg"
               >
-                <span className="text-[9px] font-black tracking-widest text-amber-400 uppercase">PIZZA</span>
-                <div className="flex items-center text-lg font-black tracking-tight text-white font-serif">
-                  <span className="text-red-500">PARAD</span>
-                  <span className="text-emerald-400">🌴</span>
-                  <span className="text-red-500">SE</span>
+                <img 
+                  src={ASSETS_3D.logo}
+                  alt="Pizza Paradise Official Logo"
+                  referrerPolicy="no-referrer"
+                  className="w-12 h-12 object-contain rounded-xl drop-shadow-[0_0_10px_rgba(245,158,11,0.4)] transform group-hover:scale-105 transition-transform"
+                />
+                <div className="flex flex-col text-left leading-none pr-1">
+                  <div className="flex items-center text-base font-black tracking-tight text-white font-serif">
+                    <span className="text-amber-400">PIZZA</span>
+                    <span className="text-red-500 ml-1">PARADISE</span>
+                  </div>
+                  <span className="text-[9px] font-bold tracking-widest text-emerald-400 uppercase mt-1">
+                    PAKISTAN OFFICIAL
+                  </span>
                 </div>
               </button>
-              <div className="flex flex-col">
-                <span className="text-xs font-black tracking-wider text-white">PIZZA PARADISE PAKISTAN</span>
-                <span className="text-[10px] text-amber-400/90 font-medium">Sovereign Taste • National Network</span>
-              </div>
             </div>
 
             <p className="text-xs text-stone-400 leading-relaxed max-w-sm">

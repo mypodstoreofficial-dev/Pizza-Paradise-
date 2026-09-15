@@ -113,11 +113,12 @@
 }
 
 /* ==========================================================================
-   7-COLOR AUTOMATIC RUNNING BORDER STYLES (WHEN TOGGLE IS "ON")
+   7-COLOR AUTOMATIC RUNNING BORDER STYLES (RUNS AUTOMATICALLY ON ALL BOXES)
    Covers entire website: Navbar, Hero, Categories, Buttons, Cards & Boxes
    ========================================================================== */
 
 /* 1. Main Big Boxes Across Website */
+.box-run-4colors,
 .seven-color-active .box-run-4colors {
   position: relative;
   border: 2.5px solid transparent !important;
@@ -140,6 +141,7 @@
 }
 
 /* 2. Menu Cards & Food Showcase Cards */
+.card-run-4colors,
 .seven-color-active .card-run-4colors {
   position: relative;
   border: 2px solid transparent !important;
@@ -162,6 +164,7 @@
 }
 
 /* 3. Deals & Subtle Cards */
+.card-run-4colors-subtle,
 .seven-color-active .card-run-4colors-subtle {
   position: relative;
   border: 1.5px solid transparent !important;
@@ -184,9 +187,13 @@
 }
 
 /* 4. Navbar Logo Badge, Delivery Pill, Search & Buttons */
+.nav-box-run-4colors,
 .seven-color-active .nav-box-run-4colors,
+.nav-pill-run-4colors,
 .seven-color-active .nav-pill-run-4colors,
+.nav-btn-run-4colors,
 .seven-color-active .nav-btn-run-4colors,
+.hotline-run-4colors,
 .seven-color-active .hotline-run-4colors {
   position: relative;
   border: 2px solid transparent !important;
@@ -209,6 +216,7 @@
 }
 
 /* 5. Category Quick-Selector Cards */
+.hero-cat-run-7colors,
 .seven-color-active .hero-cat-run-7colors {
   position: relative;
   border: 2px solid transparent !important;
@@ -231,12 +239,14 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.hero-cat-run-7colors:hover,
 .seven-color-active .hero-cat-run-7colors:hover {
   transform: translateY(-3px);
   box-shadow: 0 0 28px -2px rgba(249, 115, 22, 0.65), 0 0 12px rgba(6, 182, 212, 0.45) !important;
 }
 
 /* 6. Primary Action Button (Order 3D Pizza Menu) */
+.hero-btn-order-run-7colors,
 .seven-color-active .hero-btn-order-run-7colors {
   position: relative;
   border: 2.5px solid transparent !important;
@@ -258,11 +268,13 @@
   animation: spin7Border 2.6s linear infinite, run7ColorsGlow 3.5s ease-in-out infinite !important;
 }
 
+.hero-btn-order-run-7colors:hover,
 .seven-color-active .hero-btn-order-run-7colors:hover {
   box-shadow: 0 0 32px -1px rgba(239, 68, 68, 0.75), 0 0 14px rgba(249, 115, 22, 0.5) !important;
 }
 
 /* 7. Secondary Action Button (Custom Pizza 3D Lab) */
+.hero-btn-lab-run-7colors,
 .seven-color-active .hero-btn-lab-run-7colors {
   position: relative;
   border: 2.2px solid transparent !important;
@@ -284,11 +296,13 @@
   animation: spin7Border 2.8s linear infinite, run7ColorsGlow 4s ease-in-out infinite !important;
 }
 
+.hero-btn-lab-run-7colors:hover,
 .seven-color-active .hero-btn-lab-run-7colors:hover {
   box-shadow: 0 0 28px -1px rgba(234, 179, 8, 0.65), 0 0 12px rgba(16, 185, 129, 0.45) !important;
 }
 
 /* 8. National UAN Button */
+.hero-btn-uan-run-7colors,
 .seven-color-active .hero-btn-uan-run-7colors {
   position: relative;
   border: 2px solid transparent !important;
@@ -310,11 +324,13 @@
   animation: spin7Border 3s linear infinite, run7ColorsGlow 4s ease-in-out infinite !important;
 }
 
+.hero-btn-uan-run-7colors:hover,
 .seven-color-active .hero-btn-uan-run-7colors:hover {
   box-shadow: 0 0 26px -1px rgba(16, 185, 129, 0.65), 0 0 12px rgba(6, 182, 212, 0.45) !important;
 }
 
 /* 9. Trust & Certification Badges */
+.hero-trust-run-7colors,
 .seven-color-active .hero-trust-run-7colors {
   position: relative;
   border: 1.8px solid transparent !important;
@@ -337,12 +353,14 @@
   box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.6);
 }
 
+.hero-trust-run-7colors:hover,
 .seven-color-active .hero-trust-run-7colors:hover {
   transform: translateY(-2px);
   box-shadow: 0 0 22px -2px rgba(168, 85, 247, 0.55), 0 0 10px rgba(59, 130, 246, 0.4) !important;
 }
 
 /* 10. National Delivery Hub Router Box */
+.hero-router-run-7colors,
 .seven-color-active .hero-router-run-7colors {
   position: relative;
   border: 2.2px solid transparent !important;
